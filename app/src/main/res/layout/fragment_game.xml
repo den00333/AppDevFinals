@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/guessQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Guess the number from 1 - 100"
+        android:layout_marginTop="50dp"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/etAns"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/guessQ"
+        android:layout_centerHorizontal="true"
+        android:hint="Your guess number"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/tAns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/etAns"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_toLeftOf="@id/blank"
+        android:layout_below="@+id/tAns"
+        android:backgroundTint="@color/blue"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/blank"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:text=""
+        android:layout_below="@+id/tAns"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnSirit"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Sirit na"
+        android:backgroundTint="@color/blue"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tAns"
+        android:layout_toRightOf="@+id/blank"/>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/guessView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/blank"/>
+
+</RelativeLayout>
