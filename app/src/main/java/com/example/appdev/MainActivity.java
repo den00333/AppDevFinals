@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     private View colorPreview;
     private RelativeLayout rl;
     int defaultColor;
+    private TextView n1, n2;
+    int num1 = 5;
+    int num2 = 10;
     private static final String PREFS_NAME = "MyPrefs";
     private static final String SELECTED_COLOR_KEY = "selectedColor";
     @Override
@@ -36,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        n1 = findViewById(R.id.nnumber1);
+        n2 = findViewById(R.id.nnumber2);
+        num1 += 2;
+        num2 += 2;
+        n1.setText("num1:" + num1);
+        n2.setText("num2:" + num2);
+        Toast.makeText(this, "Dinielle Cordon", Toast.LENGTH_SHORT).show();
         int savedColor = getSavedColor();
         updateBackgroundColor(savedColor);
 
@@ -64,6 +75,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    protected void onPause(){
+        super.onPause();
+        num1 += 2;
+        num2 += 2;
+        n1.setText("num1:" + num1);
+        n2.setText("num2:" + num2);
+    }
+
     private List<MissionVissionItem>getMissionVisionData(){
         List<MissionVissionItem> data = new ArrayList<>();
         data.add(new MissionVissionItem("Mission", "Laguna University is committed to produce academically prepared and\n" +
