@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/rLayout"
     tools:context=".MainActivity">
 
 
@@ -31,7 +32,8 @@
         android:layout_height="wrap_content"
         android:text="Enter"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/rView"/>
+        android:layout_below="@id/rView"
+        android:backgroundTint="@color/blue"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rView"
@@ -39,7 +41,20 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textSection"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/blue"
         />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabChangeColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="+"
+        android:backgroundTint="@color/blue"
+        app:srcCompat = "@drawable/baseline_colorize_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        />
 
 </RelativeLayout>

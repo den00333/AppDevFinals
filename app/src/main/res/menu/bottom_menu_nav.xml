@@ -6,7 +6,7 @@
         android:icon="@drawable/baseline_games_24"/>
     <item
         android:id="@+id/navSummary"
-        android:title="Summary"
+        android:title="moto"
         android:icon="@drawable/baseline_text_snippet_24"/>
 
 </menu>
